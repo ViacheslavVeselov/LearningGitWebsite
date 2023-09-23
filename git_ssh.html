@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub SSH Key Setup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f6f8fa;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .command {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #000080;
+        }
+
+        .note {
+            color: #6a737d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Setting Up SSH Keys for GitHub</h1>
+    <p>GitHub allows you to securely authenticate with your account using SSH keys. Follow these steps to set up SSH keys:</p>
+
+    <ol>
+        <li>
+            <p>Generate an SSH key pair on your local machine:</p>
+            <pre><code class="command">
+<span class="note"># Replace your_email@example.com with your email</span>
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+            </code></pre>
+        </li>
+        <li>
+            <p>Add your SSH key to the SSH agent:</p>
+            <pre><code class="command">
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa <span class="note"># Replace id_rsa with your key file if it's different</span>
+            </code></pre>
+        </li>
+        <li>
+            <p>Copy your public key to your clipboard:</p>
+            <pre><code class="command">
+<span class="note"># On Windows, you can use 'clip' command. On Linux or macOS, use 'pbcopy'.</span>
+clip < ~/.ssh/id_rsa.pub
+            </code></pre>
+        </li>
+        <li>
+            <p>Visit your GitHub account settings and add the copied public key to your SSH keys:</p>
+            <pre><code class="note">
+1. Log in to GitHub.
+2. Click on your profile picture in the top right and select "Settings."
+3. In the left sidebar, click "SSH and GPG keys."
+4. Click "New SSH key" or "Add SSH key."
+5. Paste your public key into the "Key" field.
+6. Add a descriptive title (e.g., "My SSH Key") for your key.
+7. Click "Add SSH key."
+            </code></pre>
+        </li>
+    </ol>
+
+    <p>Your SSH key is now set up for use with GitHub, allowing you to securely authenticate and interact with your repositories.</p>
+</body>
+</html>
