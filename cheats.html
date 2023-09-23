@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Cheat Sheet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f6f8fa;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+            border: 1px solid #e1e4e8;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: #f6f8fa;
+        }
+
+        .command {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: #000080;
+        }
+
+        .description {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git Cheat Sheet</h1>
+    <ul>
+        <li>
+            <span class="command">git init</span>
+            <div class="description">Initialize a new Git repository.</div>
+        </li>
+        <li>
+            <span class="command">git clone &lt;repository-url&gt;</span>
+            <div class="description">Clone a remote repository to your local machine.</div>
+        </li>
+        <li>
+            <span class="command">git add &lt;file&gt;</span>
+            <div class="description">Stage a file for commit.</div>
+        </li>
+        <li>
+            <span class="command">git commit -m "&lt;message&gt;"</span>
+            <div class="description">Commit staged changes with a descriptive message.</div>
+        </li>
+        <li>
+            <span class="command">git pull</span>
+            <div class="description">Fetch changes from the remote repository and merge them into the current branch.</div>
+        </li>
+        <li>
+            <span class="command">git push</span>
+            <div class="description">Push your local changes to the remote repository.</div>
+        </li>
+        <li>
+            <span class="command">git branch</span>
+            <div class="description">List all branches in the repository.</div>
+        </li>
+        <li>
+            <span class="command">git checkout &lt;branch-name&gt;</span>
+            <div class="description">Switch to a different branch.</div>
+        </li>
+        <li>
+            <span class="command">git merge &lt;branch-name&gt;</span>
+            <div class="description">Merge changes from another branch into the current branch.</div>
+        </li>
+    </ul>
+</body>
+</html>
