@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Learning</title>
+    <title>Open Source</title>
     <style>
         body {
             margin: 0;
@@ -12,6 +12,7 @@
             background-image: url('https://www.christianengvall.se/wp-content/uploads/2018/04/git-reset-origin-to-commit.png');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -21,40 +22,51 @@
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px;
             border-radius: 10px;
-            text-align: center;
+            text-align: left;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .decorative-rectangle {
+            width: 100%;
+            height: 20px;
+            background-color: #007BFF;
+            position: absolute;
+            top: 0;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #007BFF;
         }
 
         p {
             font-size: 1.2rem;
+            margin: 10px 0;
         }
 
         a {
             color: #007BFF;
             text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <div class="decorative-rectangle"></div>
     <div class="container">
-        <h1>Git Learning</h1>
-        <p>Welcome to our Git learning resource. Here, you can find valuable information and resources to help you master Git, the version control system.</p>
-        <p>Get started with your Git journey:</p>
-        <ul>
-            <li><a href="about-git.html">About Git</a></li>
-            <li><a href="branching-page.html">Branching and Merging</a></li>
-            <li><a href="staging-area.html">Staging Area</a></li>
-            <li><a href="git_ssh.html">SSH Keys for GitHub</a></li>
-            <li><a href="cheats.html">Git Cheat Sheet</a></li>
-			<li><a href="open-source.html">Open Source</a></li>
-        </ul>
+        <h1>Free and Open Source</h1>
+        <p>
+			Git is released under the GNU General Public License version 2.0, which is an open source license. The Git project chose to use GPLv2 to guarantee your freedom to share and change free software---to make sure the software is free for all its users.
+		</p>
     </div>
+    <div class="decorative-rectangle"></div>
 </body>
 </html>
